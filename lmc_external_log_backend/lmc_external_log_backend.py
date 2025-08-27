@@ -8,6 +8,7 @@ import torch
 # First Party
 from lmcache.logging import init_logger
 from lmcache.v1.storage_backend.abstract_backend import StorageBackendInterface
+from lmcache.v1.storage_backend.local_cpu_backend import LocalCPUBackend
 from lmcache.utils import CacheEngineKey
 from lmcache.v1.memory_management import MemoryObj
 
@@ -21,8 +22,9 @@ class ExternalLogBackend(StorageBackendInterface):
         metadata,
         loop,
         memory_allocator,
+        local_cpu_backend: LocalCPUBackend,
         dst_device,
-        lookup_server=None
+        lookup_server=None,
     ):
         super().__init__(dst_device=dst_device)
         self.config = config

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='lmc_external_log_backend',
-    version='0.1.1',
+    version='0.1.2',
     packages=find_packages(),
     author='baoloongmao',
     author_email='maobaolong@139.com',
